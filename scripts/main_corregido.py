@@ -12,7 +12,7 @@ from airflow.models import Variable
 from airflow.hooks.postgres_hook import PostgresHook
 
 # Obtener la conexion por ID
-redshift_conn_id = "coderhouse_redshift_estefi"
+redshift_conn_id = "coderhouse_redshift"
 hook = PostgresHook(postgres_conn_id=redshift_conn_id)
 def enviar(cotizacion_blue,**context):
     try:

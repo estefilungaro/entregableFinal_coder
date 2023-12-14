@@ -7,8 +7,8 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.hooks.postgres_hook import PostgresHook
 
 # Obtener la conexión por ID
-redshift_conn_id = "coderhouse_redshift_estefi"
-hook = PostgresHook(postgres_conn_id=redshift_conn_id)
+# redshift_conn_id = "coderhouse_redshift_estefi"
+# hook = PostgresHook(postgres_conn_id=redshift_conn_id)
 
 
 # Configuración del DAG

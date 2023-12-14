@@ -7,10 +7,10 @@ Tiene programadas las consultas a la API en los horarios 7am,12pm y 17pm. Los da
 Utilicé python 3.11
 Para instalar las librerias utilizadas en mi proyecto se debe realizar: pip install -r requirements.txt
 
-## Instalación
-
-Pasos para instalar y configurar el proyecto.
-
+Se debe crear en airflow desde admin -> connections,la conexión a redshift utilizando como nombre "coderhouse_redshift" y el Connection_type "postgres"
+Crear una variable llamada "GMAIL_SECRET" con la clave de acceso al gmail para enviar el mail y en el código reemplazar el mail propio(en donde figure "e3885586@gmail.com").
 ## Uso
 
-Se debe ejecutar desde la consola con el siguiente comando: python main.py
+Se debe ejecutar desde la consola con el siguiente comando,teniendo docker arriba: docker compose up -d 
+
+luego ingresar a airflow y en la seccion de DAG's, seleccionar el dag "dag_APItoRedshift" presionar play o automáticamente se ejecutará  a las 7am ,12 del mediodia y 17hs
